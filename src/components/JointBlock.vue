@@ -11,13 +11,20 @@
         v-for="joint in jointInfo"
         :key="joint.coffeeshop"
         v-bind:joint="joint"
+        @click="true"
       />
     </section>
   </section>
 </template>
-
+<!--        data-aos="zoom-in"-->
+<!--        data-aos-duration="500"-->
+<!--        data-aos-offset="1800"-->
+<!--        data-aos-easing="ease-in"-->
 <script>
 import JointInfo from "@/components/JointInfo.vue";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default {
   name: "JointBlock",
   props: {
@@ -27,6 +34,9 @@ export default {
   },
   components: {
     JointInfo
+  },
+  setup() {
+    AOS.init();
   }
 };
 </script>
@@ -57,4 +67,5 @@ p {
   text-align: left;
   padding-left: 1em;
 }
+
 </style>

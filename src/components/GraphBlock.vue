@@ -4,7 +4,15 @@
     v-bind:class="{ 'graph-block-reversed': reversed }"
   >
     <section class="graph-container">
-      <img :src="getImgUrl(graphImageLink)" alt="graph" class="graph" />
+      <img
+        :src="getImgUrl(graphImageLink)"
+        alt="graph"
+        class="graph"
+        data-aos="fade-left"
+        data-aos-duration="1000"
+        data-aos-offset="500"
+        data-aos-easing="ease-in"
+      />
     </section>
     <section class="paragraph-container">
       <ParagraphBlock :paragraphText="paragraphText" />
@@ -15,6 +23,9 @@
 <script>
 import ParagraphBlock from "@/components/ParagraphBlock";
 import { getImgUrl } from "@/utils/getImageUrl";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default {
   name: "GraphBlock",
   components: {
@@ -25,6 +36,9 @@ export default {
     graphImageLink: String,
     reversed: Boolean
   },
+  setup() {
+    AOS.init();
+  },
   methods: {
     getImgUrl
   }
@@ -34,7 +48,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .graph-block {
-
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;

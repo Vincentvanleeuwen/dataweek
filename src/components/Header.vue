@@ -1,14 +1,14 @@
 <template>
   <header>
     <img
-      src="../assets/logo-placeholder.png"
+      src="../assets/logo.png"
       alt="image of ..."
       data-aos="fade-down-right"
       data-aos-duration="1000"
       data-aos-easing="ease-in-out"
     />
     <div data-aos="fade-right" data-aos-delay="500" data-aos-duration="700">
-      <h1>Smoking weed for science</h1>
+      <h1>What is the best pre-rolled joint of Amsterdam Central?</h1>
     </div>
   </header>
 </template>
@@ -37,11 +37,15 @@ header {
   flex-wrap: wrap;
   margin-top: 2em;
 }
+img {
+  width: 40%;
+}
 h1 {
   font-weight: bold;
   font-family: FunBlob, sans-serif;
   font-size: 16px;
   font-size: 4vw;
+  max-width: 12em;
   color: var(--normal-green);
 }
 div {
@@ -51,6 +55,12 @@ div {
 @media screen and (min-width: 60em) {
   div {
     max-width: 80rem;
+  }
+}
+@media screen and (max-width: 1230px) {
+  h1 {
+    max-width: 100%;
+    padding: 0 4em;
   }
 }
 </style>

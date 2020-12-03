@@ -1,17 +1,39 @@
 <template>
   <Header />
   <div class="home">
-    <GraphBlock :paragraphText="netherlandsText" :graphImageLink="peopleImageLink2" />
-    <GraphBlock :paragraphText="amsterdamText" :graphImageLink="peopleImageLink" />
     <GraphBlock
-      :paragraphText="pieChartText"
-      :graphImageLink="pieImageLink"
-
+      :paragraphText="netherlandsText"
+      :graphImageLink="peopleImageLink2"
     />
+    <GraphBlock
+      :paragraphText="amsterdamText"
+      :graphImageLink="peopleImageLink"
+    />
+    <GraphBlock :paragraphText="pieChartText" :graphImageLink="pieImageLink" />
     <h3>Young people really do love weed in Amsterdam huh?</h3>
     <JointBlock :jointInfo="jointInfo" />
     <h2>So what percentage is actually weed?</h2>
+    <p>
+      Of course some of these shops are a bit shady, so we wanted to know how
+      much weed they actually give you in these pre-rolled joints.
+    </p>
     <img src="@/assets/barchart.png" alt="barchart" class="bar-chart" />
+    <p>
+      It seems that the “Tweede kamer” coffeeshops joints are belony and they
+      just care about making money. (Please don't kill us Tweede Kamer).
+    </p>
+    <h2>And the clear winner is...</h2>
+    <img src="@/assets/joint-award.png" alt="barchart" class="award" />
+    <p>
+      We picked the Amnesia pre-rolled joint by Voyager as the best joint of
+      Central Amsterdam because price and quality wise it was by far the best.
+    </p>
+    <p>
+      The Joint tasted very nice and there was enough weed to get you as high as
+      as a kite. Voyagers is also a very nice coffeeshop with a large amount
+      weed/hash strains, friendly vendors and a smoke room (Sadly this was
+      closed due to the Corona Virus)
+    </p>
   </div>
 </template>
 
@@ -35,45 +57,60 @@ export default {
           taste: "Fresh",
           appearance: "sick",
           image: "Boerejongens.png",
+          openImage: "open-boerejongens.png",
           price: 4,
           effect: "Strong",
-          tobacco: "Noticeable"
+          tobacco: "Noticeable",
+          name: "White Choco Pre-rolled",
+          changeLayout: false
         },
         {
           coffeeshop: "Central",
           taste: "Bad",
           appearance: "sick",
           image: "Central.png",
+          openImage: "open-central.png",
           price: 3.5,
           effect: "Weak",
-          tobacco: "It's like smoking a cigarette"
+          tobacco: "It's like smoking a cigarette",
+          name: "Haze Joint",
+          changeLayout: false
         },
         {
           coffeeshop: "Kadinsky",
           taste: "Sweet",
           appearance: "sick",
           image: "Kadinsky.png",
+          openImage: "open-kadinsky.png",
           price: 5.5,
           effect: "Decent",
-          tobacco: "Barely noticeable"
+          tobacco: "Barely noticeable",
+          name: "Sativa Mixed",
+          changeLayout: false
         },
         {
           coffeeshop: "Tweede Kamer",
           taste: "Bad",
           appearance: "sick",
           image: "TweedeKamer.png",
+          openImage: "open-tweedekamer.png",
           price: 4.5,
           effect: "None",
-          tobacco: "It's like smoking a cigarette"
+          tobacco: "It's like smoking a cigarette",
+          name: "Mexican Haze Joint",
+          changeLayout: false
         },
         {
           coffeeshop: "Voyagers",
           taste: "Bittersweet",
           appearance: "sick",
           image: "Voyagers.png",
+          openImage: "open-voyagers.png",
           price: 5,
           effect: "Really strong",
-          tobacco: "Barely noticeable"
+          tobacco: "Barely noticeable",
+          name: "Amnesia Haze",
+          changeLayout: false
         }
       ],
       peopleImageLink: "peopleChart.png",
@@ -93,6 +130,9 @@ export default {
 .bar-chart {
   width: 100%;
 }
+.award {
+  width: 50%;
+}
 h2 {
   font-size: 4vw;
   font-family: FunBlob, sans-serif;
@@ -102,5 +142,12 @@ h2 {
 h3 {
   margin-bottom: 5em;
   font-weight: 900;
+}
+p {
+  padding: 0 15em;
+  text-align: left;
+}
+span {
+  margin-top: 1em;
 }
 </style>

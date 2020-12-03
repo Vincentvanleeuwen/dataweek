@@ -2,28 +2,46 @@
   <section class="joint-info-container">
     <section class="joint-coffeeshop-container">
       <h3>{{ joint.coffeeshop }}</h3>
+      <span> {{ joint.name }}</span>
       <!--      <img :src="getImgUrl(joint.image)" :alt="joint.coffeeshop" />-->
     </section>
     <section class="joint-info-text-container">
-      <img :src="getImgUrl(joint.image)" alt="joint" class="joint-image" />
-      <section class="description-container">
-        <section class="pricing">
-          <h4>Pricing</h4>
-          <p>€{{ joint.price }}</p>
-        </section>
-        <section class="rest">
-          <h4>Effect</h4>
-          <p>{{ joint.effect }}</p>
-        </section>
-        <section class="rest">
-          <h4>Taste</h4>
-          <p>{{ joint.taste }}</p>
-        </section>
-        <section class="rest">
-          <h4>Tobacco check</h4>
-          <p>{{ joint.tobacco }}</p>
-        </section>
-      </section>
+      <transition name="fade" mode="out-in">
+        <div v-if="!joint.changeLayout">
+          <img :src="getImgUrl(joint.image)" alt="joint" class="joint-image" />
+          <section class="description-container">
+            <section class="pricing">
+              <h4>Pricing</h4>
+              <p>€{{ joint.price }}</p>
+            </section>
+            <section class="rest">
+              <h4>Effect</h4>
+              <p>{{ joint.effect }}</p>
+            </section>
+            <section class="rest">
+              <h4>Taste</h4>
+              <p>{{ joint.taste }}</p>
+            </section>
+            <section class="rest">
+              <h4>Tobacco check</h4>
+              <p>{{ joint.tobacco }}</p>
+            </section>
+            <button class="unwrap-button" @click="triggerChangeLayout">
+              Unwrap this joint
+            </button>
+          </section>
+        </div>
+        <div v-else>
+          <img
+            :src="getImgUrl(joint.openImage)"
+            alt="joint"
+            class="joint-image-open"
+          />
+          <button class="unwrap-button" @click="triggerChangeLayout">
+            Wrap it back into a joint!
+          </button>
+        </div>
+      </transition>
     </section>
   </section>
 </template>
@@ -41,7 +59,11 @@ export default {
   name: "JointInfo",
   props: ["joint"],
   methods: {
-    getImgUrl
+    getImgUrl,
+    triggerChangeLayout() {
+      const selected = this.joint;
+      selected.changeLayout = !selected.changeLayout;
+    }
   }
 };
 </script>
@@ -50,12 +72,16 @@ export default {
 .joint-info-container {
   flex: 1;
   margin: 0 1em 5em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .joint-coffeeshop-container {
   position: relative;
   display: flex;
   justify-content: center;
-
+  flex-direction: column;
   align-items: center;
   background-color: var(--call-to-action);
   height: 14em;
@@ -70,9 +96,10 @@ export default {
 .joint-info-text-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: var(--light-green);
   position: relative;
-
   margin-top: -4em;
   min-width: 20em;
   max-width: 20em;
@@ -85,11 +112,29 @@ export default {
   top: -1em;
   left: -2em;
 }
+.joint-image-open {
+  width: 90%;
+}
+.unwrap-button {
+  border: 0;
+  padding: 0.5em 2em;
+  margin-bottom: 3em;
+  font-weight: bold;
+  color: var(--background);
+  background-color: var(--dark-green);
+  cursor: pointer;
+  width: 15em;
+}
 h3 {
   font-family: Raleway, sans-serif;
   font-weight: 900;
   font-size: 2.5vw;
   color: var(--background);
+  margin: -2em 0 0 0;
+}
+span {
+  margin-top: 1em;
+  font-style: italic;
 }
 .pricing h4,
 .rest h4 {
@@ -123,5 +168,12 @@ h3 {
   padding: 0 2em;
   margin-top: 0.2em;
   text-align: center;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
