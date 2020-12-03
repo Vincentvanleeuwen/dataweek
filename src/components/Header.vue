@@ -8,7 +8,7 @@
       data-aos-easing="ease-in-out"
     />
     <div data-aos="fade-right" data-aos-delay="500" data-aos-duration="700">
-      <h1>What is the best pre-rolled joint of Amsterdam Central?</h1>
+      <h1>What is the best pre-rolled joint of central Amsterdam?</h1>
     </div>
   </header>
 </template>
