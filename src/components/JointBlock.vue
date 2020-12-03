@@ -1,6 +1,11 @@
 <template>
   <section class="joint-block-container">
     <h2>Our Contestants</h2>
+    <p>
+      We thought it would be funny to compare the five highest rated shops in
+      Amsterdam. We bought a pre-rolled joint from all of the five shops. The
+      joints are in the same price range and we compared some of the values.
+    </p>
     <section class="joint-container">
       <JointInfo
         v-for="joint in jointInfo"
@@ -46,5 +51,10 @@ h2 {
   font-size: 16px;
   font-size: 4vw;
   max-width: 50vw;
+}
+p {
+  max-width: 50%;
+  text-align: left;
+  padding-left: 1em;
 }
 </style>

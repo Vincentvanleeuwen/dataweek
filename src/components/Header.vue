@@ -1,15 +1,26 @@
 <template>
   <header>
-    <img src="../assets/logo-placeholder.png" alt="image of ..." />
-    <div>
+    <img
+      src="../assets/logo-placeholder.png"
+      alt="image of ..."
+      data-aos="fade-down-right"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+    />
+    <div data-aos="fade-right" data-aos-delay="500" data-aos-duration="700">
       <h1>Smoking weed for science</h1>
     </div>
   </header>
 </template>
 
 <script>
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default {
-  name: "Header"
+  name: "Header",
+  setup() {
+    AOS.init()
+  }
 };
 </script>
 

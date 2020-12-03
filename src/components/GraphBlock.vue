@@ -34,11 +34,15 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .graph-block {
-  margin: 15em 0;
+
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column-reverse;
+  justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
+}
+.graph-block:first-of-type {
+  margin: 5em 0 0 0;
 }
 .graph-container {
   flex: 5;
@@ -50,7 +54,7 @@ export default {
 }
 img {
   /*object-fit: cover;*/
-  min-width: 40em;
+  min-width: 50em;
   width: 50vw;
   min-height: 20vw;
 }
@@ -59,7 +63,7 @@ img {
   justify-content: center;
   align-items: center;
   flex: 4;
-  padding-right: 5em;
+
   text-align: left;
   max-width: 30em;
   min-width: 15em;

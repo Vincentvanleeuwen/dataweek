@@ -49,7 +49,7 @@ export default {
 <style scoped>
 .joint-info-container {
   flex: 1;
-  margin: 0 1em 15em 1em;
+  margin: 0 1em 5em 1em;
 }
 .joint-coffeeshop-container {
   position: relative;
@@ -82,21 +82,20 @@ export default {
 }
 .joint-image {
   position: absolute;
-  top: 1em;
+  top: -1em;
   left: -2em;
 }
 h3 {
-
   font-family: Raleway, sans-serif;
   font-weight: 900;
-  font-size: 1.5vw;
+  font-size: 2.5vw;
   color: var(--background);
 }
 .pricing h4,
 .rest h4 {
   font-family: Raleway, sans-serif;
   font-weight: 900;
-  font-size: 1vw;
+  font-size: 2vw;
   color: var(--dark-green);
   margin-bottom: 0.5em;
 }
@@ -120,8 +119,9 @@ h3 {
   font-family: Raleway, sans-serif;
   font-weight: 900;
   color: var(--normal-green);
-  font-size: 1vw;
-  padding: 0 1em;
+  font-size: 2vw;
+  padding: 0 2em;
+  margin-top: 0.2em;
   text-align: center;
 }
 </style>

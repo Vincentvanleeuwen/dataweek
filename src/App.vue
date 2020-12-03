@@ -12,8 +12,13 @@
   --call-to-action: #6cc6c7;
 }
 body {
+  background-image: url("assets/weedleaf.png");
+  background-repeat: space;
+  background-position: center center;
   background-color: var(--background);
   font-family: Raleway, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

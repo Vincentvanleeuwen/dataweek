@@ -17,4 +17,10 @@ p {
   font-size: 14px;
   font-size: 2vw;
 }
+@media screen and (max-width: 28em) {
+  p {
+    font-size: 26px;
+    font-size: 6vw;
+  }
+}
 </style>

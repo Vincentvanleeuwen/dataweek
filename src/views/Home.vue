@@ -1,12 +1,14 @@
 <template>
   <Header />
   <div class="home">
-    <GraphBlock :paragraphText="graphText" :graphImageLink="peopleImageLink" />
+    <GraphBlock :paragraphText="netherlandsText" :graphImageLink="peopleImageLink2" />
+    <GraphBlock :paragraphText="amsterdamText" :graphImageLink="peopleImageLink" />
     <GraphBlock
-      :paragraphText="graphText"
+      :paragraphText="pieChartText"
       :graphImageLink="pieImageLink"
-      :reversed="true"
+
     />
+    <h3>Young people really do love weed in Amsterdam huh?</h3>
     <JointBlock :jointInfo="jointInfo" />
     <h2>So what percentage is actually weed?</h2>
     <img src="@/assets/barchart.png" alt="barchart" class="bar-chart" />
@@ -74,10 +76,15 @@ export default {
           tobacco: "Barely noticeable"
         }
       ],
-      peopleImageLink: "people-placeholder.png",
-      pieImageLink: "pie-placeholder.png",
-      graphText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut lorem ac ex scelerisque posuere. Sed scelerisque consequat sodales. Vestibulum vitae varius mauris. Vestibulum mattis finibus justo quis aliquam. Duis porttitor bibendum arcu, ut laoreet libero convallis sed. Quisque ut lobortis nibh. Cras sit amet nunc consectetur, dignissim libero ac, hendrerit enim.\n"
+      peopleImageLink: "peopleChart.png",
+      peopleImageLink2: "peopleChart2.png",
+      pieImageLink: "piechart.png",
+      netherlandsText:
+        "Weed is a commonly used product which a lot of people around the world enjoy (including us), but since we live in the Netherlands we were wondering how many of those people have actually smoked cannabis this year.",
+      amsterdamText:
+        "Most coffee shops are based in Amsterdam so we compared if the weed consumption over there is higher than the national average. ",
+      pieChartText:
+        "But most of the weed consumers are of course, you guessed it right, young people! We took an average age which correlates with other ages so if you go one year down or one year of age up it would not make much of a difference. The average age is 25 years old."
     };
   }
 };
@@ -90,6 +97,10 @@ h2 {
   font-size: 4vw;
   font-family: FunBlob, sans-serif;
   padding: 0 5em;
-  color: var(--normal-green)
+  color: var(--normal-green);
+}
+h3 {
+  margin-bottom: 5em;
+  font-weight: 900;
 }
 </style>
