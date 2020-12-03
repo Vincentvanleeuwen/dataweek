@@ -66,6 +66,7 @@ p {
   max-width: 50%;
   text-align: left;
   padding-left: 1em;
+  font-size: 14px;
+  font-size: 2vw;
 }
-
 </style>

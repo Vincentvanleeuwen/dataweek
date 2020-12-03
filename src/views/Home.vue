@@ -11,6 +11,18 @@
     />
     <GraphBlock :paragraphText="pieChartText" :graphImageLink="pieImageLink" />
     <h3>Young people really do love weed in Amsterdam huh?</h3>
+    <p>
+      But we, as avid stoners wanted to know what the best pre-rolled joint of
+      central Amsterdam was. So we decided to find out what the best coffeeshops
+      near Amsterdam CS are. Then we would go to those coffeeshops and buy a
+      pre-rolled joint with tobacco that was around €4 to €5.
+    </p>
+    <p>
+      We also did a quick review of the coffeeshops to find out if it is worth the time and money to go to one of these specific coffeeshops.
+    </p>
+    <p>
+      In total we had 5 different pre-rolled joints. We openend the joints to check out how much weed was inside of them, Rolled them up again and started smoking them. We checked all the joints on price, effect, taste and tabacco check.In total we had 5 different pre-rolled joints. We openend the joints to check out how much weed was inside of them, Rolled them up again and started smoking them. We checked all the joints on price, effect, taste and tabacco check.
+    </p>
     <JointBlock :jointInfo="jointInfo" />
     <h2>So what percentage is actually weed?</h2>
     <p>
@@ -146,6 +158,8 @@ h3 {
 p {
   padding: 0 15em;
   text-align: left;
+  font-size: 14px;
+  font-size: 2vw;
 }
 span {
   margin-top: 1em;
