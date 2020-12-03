@@ -41,7 +41,7 @@
     <h2>And the clear winner is...</h2>
     <img src="@/assets/joint-award.png" alt="barchart" class="award" />
     <p>
-      We picked the Amnesia pre-rolled joint by Voyager as the best joint of
+      We picked the Amnesia pre-rolled joint by Voyagers as the best joint of
       Central Amsterdam because price and quality wise it was by far the best.
     </p>
     <p>
