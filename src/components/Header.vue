@@ -2,7 +2,7 @@
   <header>
     <img src="../assets/logo-placeholder.png" alt="image of ..." />
     <div>
-      <h1>The best pre-rolled joints of Amsterdam Central</h1>
+      <h1>Smoking weed for science</h1>
     </div>
   </header>
 </template>
@@ -14,6 +14,10 @@ export default {
 </script>
 
 <style scoped>
+@font-face {
+  font-family: FunBlob;
+  src: url("../assets/fonts/FunBlob.ttf");
+}
 header {
   display: flex;
   flex-direction: row;
@@ -24,8 +28,10 @@ header {
 }
 h1 {
   font-weight: bold;
+  font-family: FunBlob, sans-serif;
   font-size: 16px;
   font-size: 4vw;
+  color: var(--normal-green);
 }
 div {
   max-width: 60rem;

@@ -14,7 +14,7 @@
 
 <script>
 import ParagraphBlock from "@/components/ParagraphBlock";
-import { getImgUrl } from '@/utils/getImageUrl';
+import { getImgUrl } from "@/utils/getImageUrl";
 export default {
   name: "GraphBlock",
   components: {

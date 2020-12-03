@@ -8,6 +8,8 @@
       :reversed="true"
     />
     <JointBlock :jointInfo="jointInfo" />
+    <h2>So what percentage is actually weed?</h2>
+    <img src="@/assets/barchart.png" alt="barchart" class="bar-chart" />
   </div>
 </template>
 
@@ -28,33 +30,48 @@ export default {
       jointInfo: [
         {
           coffeeshop: "Boerejongens",
-          taste: "fris",
+          taste: "Fresh",
           appearance: "sick",
-          image: "boerejongens.png"
+          image: "Boerejongens.png",
+          price: 4,
+          effect: "Strong",
+          tobacco: "Noticeable"
         },
         {
           coffeeshop: "Central",
-          taste: "als",
+          taste: "Bad",
           appearance: "sick",
-          image: "central.png"
+          image: "Central.png",
+          price: 3.5,
+          effect: "Weak",
+          tobacco: "It's like smoking a cigarette"
         },
         {
           coffeeshop: "Kadinsky",
-          taste: "het",
+          taste: "Sweet",
           appearance: "sick",
-          image: "kadinsky.png"
+          image: "Kadinsky.png",
+          price: 5.5,
+          effect: "Decent",
+          tobacco: "Barely noticeable"
         },
         {
           coffeeshop: "Tweede Kamer",
-          taste: "schoon",
+          taste: "Bad",
           appearance: "sick",
-          image: "tweedekamer.png"
+          image: "TweedeKamer.png",
+          price: 4.5,
+          effect: "None",
+          tobacco: "It's like smoking a cigarette"
         },
         {
           coffeeshop: "Voyagers",
-          taste: "is",
+          taste: "Bittersweet",
           appearance: "sick",
-          image: "voyagers.png"
+          image: "Voyagers.png",
+          price: 5,
+          effect: "Really strong",
+          tobacco: "Barely noticeable"
         }
       ],
       peopleImageLink: "people-placeholder.png",
@@ -65,3 +82,14 @@ export default {
   }
 };
 </script>
+<style scoped>
+.bar-chart {
+  width: 100%;
+}
+h2 {
+  font-size: 4vw;
+  font-family: FunBlob, sans-serif;
+  padding: 0 5em;
+  color: var(--normal-green)
+}
+</style>
