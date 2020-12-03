@@ -18,10 +18,14 @@
       pre-rolled joint with tobacco that was around €4 to €5.
     </p>
     <p>
-      We also did a quick review of the coffeeshops to find out if it is worth the time and money to go to one of these specific coffeeshops.
+      We also did a quick review of the coffeeshops to find out if it is worth
+      the time and money to go to one of these specific coffeeshops.
     </p>
     <p>
-      In total we had 5 different pre-rolled joints. We openend the joints to check out how much weed was inside of them, Rolled them up again and started smoking them. We checked all the joints on price, effect, taste and tabacco check.In total we had 5 different pre-rolled joints. We openend the joints to check out how much weed was inside of them, Rolled them up again and started smoking them. We checked all the joints on price, effect, taste and tabacco check.
+      In total we had 5 different pre-rolled joints. We opened the joints to
+      check out how much weed was inside of them, Rolled them up again and
+      started smoking them. We checked all the joints on price, effect, taste
+      and did a tobacco check.
     </p>
     <JointBlock :jointInfo="jointInfo" />
     <h2>So what percentage is actually weed?</h2>
@@ -42,7 +46,7 @@
     </p>
     <p>
       The Joint tasted very nice and there was enough weed to get you as high as
-      as a kite. Voyagers is also a very nice coffeeshop with a large amount
+      a kite. Voyagers is also a very nice coffeeshop with a large amount
       weed/hash strains, friendly vendors and a smoke room (Sadly this was
       closed due to the Corona Virus)
     </p>
@@ -163,5 +167,12 @@ p {
 }
 span {
   margin-top: 1em;
+}
+.play-audio {
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+  z-index: 10;
+  cursor: pointer;
 }
 </style>

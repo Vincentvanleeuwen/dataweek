@@ -3,7 +3,6 @@
     <section class="joint-coffeeshop-container">
       <h3>{{ joint.coffeeshop }}</h3>
       <span> {{ joint.name }}</span>
-      <!--      <img :src="getImgUrl(joint.image)" :alt="joint.coffeeshop" />-->
     </section>
     <section class="joint-info-text-container">
       <transition name="fade" mode="out-in">
@@ -45,13 +44,6 @@
     </section>
   </section>
 </template>
-<!--coffeeshop: "Boerejongens",
-          taste: "Fresh",
-          appearance: "sick",
-          image: "Boerejongens.png",
-          price: 4,
-          effect: "Strong",
-          tobacco: "Noticeable"-->
 <script>
 import { getImgUrl } from "@/utils/getImageUrl";
 
@@ -128,8 +120,8 @@ export default {
 h3 {
   font-family: Raleway, sans-serif;
   font-weight: 900;
-  font-size: 2.5vw;
-  color: var(--background);
+  font-size: 3vw;
+  color: var(--dark-green);
   margin: -2em 0 0 0;
 }
 span {
@@ -175,5 +167,20 @@ span {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+@media screen and (max-width: 40em) {
+  h3 {
+    font-size: 5vw;
+  }
+  .joint-image {
+    transform: scale(0.7);
+    top: -7em;
+    left: -2em;
+  }
+}
+@media screen and (min-width: 60em) {
+  h3 {
+    font-size: 2.5vw;
+  }
 }
 </style>
